@@ -1,0 +1,93 @@
+{
+  "name": "transken_v01",
+  "homepage": "http://transken.co.ke",
+  "version": "0.1.0",
+  "description": "Transken Links Limited",
+  "private": true,
+  "dependencies": {
+    "@aws-amplify/auth": "^4.4.2",
+    "@emailjs/browser": "^3.4.0",
+    "@fortawesome/fontawesome-free": "^6.1.0",
+    "@googlemaps/react-wrapper": "^1.1.24",
+    "@hcaptcha/react-hcaptcha": "^1.1.1",
+    "@iconify/react": "^3.1.3",
+    "@material-tailwind/react": "0.3.4",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "aws-sdk": "^2.1084.0",
+    "bootstrap": "5.1.3",
+    "browser-sync": "^2.27.7",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "flowbite": "^1.3.4",
+    "framer-motion": "^6.2.6",
+    "google-map-react": "^2.1.10",
+    "google-maps-react": "^2.0.6",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.3",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-wait": "^0.0.2",
+    "gulp-webp": "^4.0.1",
+    "jquery": "^3.6.0",
+    "nodemailer": "^6.7.2",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-awesome-slider": "^4.1.0",
+    "react-bootstrap": "^2.1.2",
+    "react-dom": "^17.0.2",
+    "react-elastic-carousel": "^0.11.5",
+    "react-google-recaptcha": "^2.1.0",
+    "react-hide-on-scroll": "^1.1.4",
+    "react-hideandseekmenu": "^2.1.1",
+    "react-responsive-carousel": "^3.2.22",
+    "react-scripts": "5.0.0",
+    "react-scroll": "^1.8.6",
+    "react-slick": "^0.28.1",
+    "sass": "^1.49.7",
+    "swiper": "^8.0.6",
+    "tw-elements": "^1.0.0-alpha11",
+    "typescript": "^4.6.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "tw": "tailwind build -i src/index.css -o src/tailwind.css --watch",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "axios": "^0.26.0",
+    "hamburger-react": "^2.4.1",
+    "postcss": "^8.4.6",
+    "react-router-dom": "^6.2.1",
+    "tailwindcss": "^3.0.22"
+  },
+  "main": "gulpfile.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

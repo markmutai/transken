@@ -1,0 +1,429 @@
+/*
+
+v0,1 
+Changelog:
+
+    - Implementation of TailwindCSS
+    - More Flex Elements
+    - Responsivenesss Rem Conversion
+    - More Algebra
+    - Integration of Font Awesome
+    - Integration of IcoMoon
+    - Conversion to HSL colour palette (Purp)
+    - More Frosting
+
+============================================================================================================
+Table of Contents
+============================================================================================================
+
+Fonts
+
+
+Sass
+    main
+    timing
+    scaling
+    colours
+    functions
+    typography_mixins
+    animation_mixins
+
+
+Animation
+
+    scroll_microtransitions
+    gallery_microtransitions
+    message_microtransitions
+
+
+Accesibility
+
+
+Universal_x_Containers
+
+
+Typography
+
+
+Responsiveness
+
+*/
+
+/*
+
+============================================================================================================
+Fonts
+============================================================================================================
+
+*/
+
+$html-font-size: 16px;
+
+/* functions--------------------------------------------------------------------------------------------*/
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+  // @return calc($value / ($value * 0 + 1));
+}
+
+// math.div($value, $value * 0 + 1) or calc($value / ($value * 0 + 1))
+
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+/* Timing--------------------------------------------------------------------------------------------*/
+
+$time-m: 300ms;
+$time-l: 400ms;
+$time-xl: 500ms;
+$time-xxl: 750ms;
+
+/* 
+
+/* animation_mixins------------------------------------------------------------------------------------*/
+
+@mixin transition-animation($transition-time) {
+  -webkit-transition: all $transition-time ease-in-out !important;
+  -moz-transition: all $transition-time ease-in-out !important;
+  -ms-transition: all $transition-time ease-in-out !important;
+  -o-transition: all $transition-time ease-in-out !important;
+  transition: all $transition-time ease-in-out !important;
+}
+
+@mixin transform-scale($transform-size) {
+  -webkit-transform: $transform-size;
+  -moz-transform: $transform-size;
+  -ms-transform: $transform-size;
+  -o-transform: $transform-size;
+  transform: $transform-size;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+@mixin fade-in {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+@mixin after-fx($h_fx) {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $h_fx;
+}
+
+@mixin font($font-family, $font-file) {
+    @font-face {
+      font-family: $font-family;
+      src: url($font-file+'.eot');
+      src: url($font-file+'.eot?#iefix') format('embedded-opentype'),
+           url($font-file+'.woff') format('woff'),
+           url($font-file+'.ttf') format('truetype'),
+           url($font-file+'.svg#'+$font-family) format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+
+
+  @keyframes sendFlash {
+    0% {
+      // transform: translateY(0);
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      // transform: translateY(40px);
+      opacity: 0;
+    }
+  }
+
+  .sendingMessage{
+    animation: sendFlash ease 1.2s infinite;
+  }
+
+  .fixed-menu{
+    position: fixed !important;
+    top: 0 !important;
+  }
+
+
+/*
+
+============================================================================================================
+Universal_x_Containers
+============================================================================================================
+
+*/
+
+@include font('FrizQuadrataStd', '../fonts/FrizQuadrataStd');
+@include font('FrizQuadrataStd-Bold', '../fonts/FrizQuadrataStd-Bold');
+// @include font('Arvo-Bold', '/htdocs/lib/fonts/Arvo-Bold');
+// @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Poppins:wght@400;500;700&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;700&display=swap');
+
+html,
+body {
+  scroll-behavior: smooth;
+  min-height: -webkit-fill-available !important;
+}
+
+.ptn{
+  background: url(../img/tkl_ptn.png);
+  background-repeat: repeat;
+  background-position: 0 -120px;
+  background-attachment: fixed;
+  opacity: 0.15;
+  background-blend-mode: overlay;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(180deg, rgba(0,0,0,1)0%, rgba(0,0,0,0.6)60%,  rgba(0,0,0,0)100%);
+}
+
+.ptn-bottom{
+  // position: absolute;
+  // width: 100%;
+  // height: 400px;
+  // z-index: 9999 !important;
+  background: url(../img/tkl_ptn.png);
+  background-repeat: repeat;
+  background-position: 0 -110px;
+  background-attachment: fixed;
+  opacity: 0.15;
+  background-blend-mode: overlay;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,.6)));
+  mask-image: linear-gradient(0deg, rgba(0,0,0,1)0%, rgba(0,0,0,0)60%);
+}
+
+// .introView{
+//   background: url('../img/farmland-hlf.webp');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+  
+// }
+
+
+/*
+
+============================================================================================================
+Menu
+============================================================================================================
+
+*/
+
+// .infoContainer{
+//     -webkit-backface-visibility: hidden;
+//   -webkit-perspective: 1000;
+//   -webkit-transform: translate3d(0, 0, 0);
+//   -webkit-transform: translateZ(0);
+//   backface-visibility: hidden;
+//   perspective: 1000;
+//   transform: translate3d(0, 0, 0);
+//   transform: translateZ(0);
+//   backdrop-filter: blur(12px);
+// }
+
+.glsWindow{
+  background: hsla(0, 100%, 100%, .5);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .glsWindow{
+    background: hsla(0, 100%, 100%, .85);
+    background:linear-gradient(130deg, hsla(0,100%, 100%, .85) 16%, hsla(0,100%, 100%, .65)  35%, hsla(0,100%, 100%, .5)  100%);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
+    backdrop-filter: blur(12px);
+  }
+}
+
+@-moz-document url-prefix() {
+  .glsWindow{
+    background: hsla(0, 100%, 100%, .92);
+  }
+}
+
+// .menu{
+//   box-shadow:0px 0px 0px 7px hsla(0, 100%, 100%,0.6)
+// }
+
+.menuList{
+    font-family: FrizQuadrataStd-Bold, Arial, Helvetica, sans-serif;
+}
+
+.titles{
+    font-family: FrizQuadrataStd-Bold, Arial, Helvetica, sans-serif;
+}
+
+.parTxt{
+    font-family: 'Jost', Arial, Helvetica, sans-serif;
+}
+
+.parIntro{
+  text-align: justify;
+  text-align-last: center;
+}
+
+.divisionInfo{
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+// .whoContainer{
+//   box-shadow: inset 8px 8px 12px hsla(0,0%,0,.15);
+// }
+
+.servicesInfo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.formContainer{
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+$arrowSize:1.6rem;
+$backgroundSize:80% 80%;
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  background-size: $backgroundSize;
+  background-image: url('../img/icons/arrow.svg');
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-prev-icon:hover,
+.carousel-control-next:hover .carousel-control-next-icon,
+.carousel-control-next-icon:hover{
+  background-image: url('../img/icons/arrow-blue.svg');
+}
+
+.carousel-control-prev-icon {
+  width: $arrowSize;
+  height: $arrowSize;
+  background-size: $backgroundSize;
+  background-position: 50%;
+  transform: rotate(180deg);
+}
+
+.carousel-control-next-icon {
+  width: $arrowSize;
+  height: $arrowSize;
+  background-size: $backgroundSize;
+  background-position: 50%;
+  background-image: url('../img/icons/arrow.svg');
+}
+
+.carousel-control-prev-icon{
+  width:rem(60px);
+  max-width:rem(100px)
+}
+
+.carousel-indicators [data-bs-target] {
+  $sliderMargin:8px;
+  height: 5px;
+  margin-right: $sliderMargin;
+  margin-left: $sliderMargin;
+  background-color: hsl(196, 100%, 47%);
+  opacity: 0.3;
+  // box-sizing: content-box;
+  // flex: 0 1 auto;
+  // width: 30px;
+  // padding: 0;
+  // -webkit-text-indent: -999px;
+  // text-indent: -999px;
+  // cursor: pointer;
+  // background-clip: padding-box;
+  // border: 0;
+  // border-top: 10px solid transparent;
+  // border-bottom: 10px solid transparent;
+  // transition: opacity 0.6s ease;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: hsl(196, 100%, 55%);
+}
+
+.messageSuccess{
+  background:green;
+  width: rem(60px);
+  height: rem(20px);
+  margin: auto;
+}
+
+footer{
+  // z-index: 999 !important;
+  background: hsla(0, 100%, 100%, .85);
+  background:linear-gradient(130deg, hsla(0,100%, 100%, 1) 0%, hsla(0,100%, 100%, .75) 25%, hsla(0,100%, 100%, .5)  45%, hsla(0,100%, 100%, .15)  100%);
+}
+
+
+@media (max-width: 1600px) {
+  $arrowSizeXl:1.3rem;
+// $backgroundSize:80% 80%;
+  .carousel-control-prev-icon {
+    width: $arrowSizeXl;
+    height: $arrowSizeXl;
+    background-size: $backgroundSize;
+  }
+  
+  .carousel-control-next-icon {
+    width: $arrowSizeXl;
+    height: $arrowSizeXl;
+    background-size: $backgroundSize;
+  }
+}
+
+
+@media (max-width: 1120px) {
+  $arrowSizeLg:1.2rem;
+// $backgroundSize:80% 80%;
+  .carousel-control-prev-icon {
+    width: $arrowSizeLg;
+    height: $arrowSizeLg;
+    background-size: $backgroundSize;
+  }
+  
+  .carousel-control-next-icon {
+    width: $arrowSizeLg;
+    height: $arrowSizeLg;
+    background-size: $backgroundSize;
+  }
+}
+
+
+
+@media (max-width: 360px) {
+.glsWindow{
+  background: hsla(0, 100%, 100%, .75) ;
+}
+}
