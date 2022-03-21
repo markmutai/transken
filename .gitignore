@@ -11,6 +11,11 @@
 # production
 /build
 
+#security
+/src/components/contact
+/src/components/phpmailer
+/src/components/aws
+
 # misc
 .DS_Store
 .env.local
