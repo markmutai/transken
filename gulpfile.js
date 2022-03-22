@@ -56,7 +56,11 @@ gulp.task("compile_css", async function () {
 gulp.task("watchMeDoMyTing", function () {
     browserSync.init({
         watch: true,
-        server: false
+        server: false,
+        port: 3010,
+        ui: {
+            port: 3020
+        },
     });
     // gulp.watch("./*.php").on("change", reload);
     gulp.watch(sass_src, gulp.series("compile_sass"));

@@ -373,6 +373,28 @@ $backgroundSize:80% 80%;
   background-color: hsl(196, 100%, 55%);
 }
 
+.rightBtn{
+  position:absolute;
+  top:50%;
+  right:32px;
+  width:32px;
+  height:32px;
+  background-color: hsl(196, 100%, 55%);
+  cursor: pointer;
+  user-select: none;
+}
+
+.rightBtn{
+  position:absolute;
+  top:50%;
+  left:32px;
+  width:32px;
+  height:32px;
+  background-color: hsl(196, 100%, 55%);
+  cursor: pointer;
+  user-select: none;
+}
+
 .messageSuccess{
   background:green;
   width: rem(60px);

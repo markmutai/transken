@@ -5,6 +5,8 @@ import Fonts from "../../components/theme/fonts";
 import Colors from "../../components/theme/colors";
 import Buttons from "../../components/theme/buttons";
 import Images from "../../assets/img/index.js";
+// import ImageSlider from "../../assets/img/imageSlider";
+// import { SliderData } from '../../assets/img/sliderData';
 // import { Button } from "react-bootstrap";
 
 export const HomePage = () => {
@@ -395,6 +397,7 @@ export const HomePage = () => {
                             </div>
 
                         </div>
+                        {/* <ImageSlider slides={SliderData}/> */}
                         <div id="gallery" className="galleryContainer">
 
                             <div className="xsm:pt-4 md:pt-8 2xl:pt-10 xsm:px-3 md:px-10 2xl:px-12">
