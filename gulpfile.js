@@ -1,7 +1,6 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const webp = require("gulp-webp");
-// const php = require("gulp-connect-php");
 const minifyCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const changed = require("gulp-changed");
@@ -62,7 +61,6 @@ gulp.task("watchMeDoMyTing", function () {
             port: 3020
         },
     });
-    // gulp.watch("./*.php").on("change", reload);
     gulp.watch(sass_src, gulp.series("compile_sass"));
     gulp.watch("./src/assets/sass/*.scss").on("change", reload);
     gulp.watch("./src/assets/css/*.css").on("change", reload);

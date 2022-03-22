@@ -244,6 +244,28 @@ Menu
   background-color: #1ac2ff;
 }
 
+.rightBtn {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+  background-color: #1ac2ff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.rightBtn {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  width: 32px;
+  height: 32px;
+  background-color: #1ac2ff;
+  cursor: pointer;
+  user-select: none;
+}
+
 .messageSuccess {
   background: green;
   width: 3.75rem;
