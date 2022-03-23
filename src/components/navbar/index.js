@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import DropdownRender from "./dropdown";
 
 // import LogoImg from "../../assets/img/logo.png";
 // import LogoTxt from "../../assets/img/logo_txt.png";
 
 export const Navbar = () => {
+    const menuItems = "transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2";
+
     return (
         <>
             {/* <HeaderContact /> */}
@@ -16,7 +20,7 @@ export const Navbar = () => {
                             <h1 className="titles xsm:ml-1 md:ml-2 lg:ml-1 2xl:ml-2 xsm:text-tiny md:text-base lg:text-xl text-white">Transken Links Limited</h1>
                         </div>
                         <div className="xsm:hidden lg:block menuContainer w-1/2 h-full">
-                            <ul className="transition-all duration-400 menuList cursor-default inline-flex list-none w-full h-full text-white items-center justify-end xsm:space-x-2 lg:space-x-4 xl:space-x-1 2xl:space-x-4 xsm:text-sm lg:text-base 2xl:text-md">
+                            <ul className="transition-all duration-400 menuList cursor-default inline-flex list-none w-full h-full text-white items-center justify-end xsm:space-x-2 lg:space-x-4 xl:space-x-1 2xl:space-x-3 xsm:text-sm lg:text-base 2xl:text-md">
                                 {/* <li className="transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2">
                                     <a href="/"
                                         onClick={e => {
@@ -28,6 +32,11 @@ export const Navbar = () => {
                                         Home
                                     </a>
                                 </li> */}
+                                <div className="transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2">
+                                    <Link to="/">
+                                        Home
+                                    </Link>
+                                </div>
                                 <li className="transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2">
                                     <a href="/"
                                         onClick={e => {
@@ -39,7 +48,7 @@ export const Navbar = () => {
                                         About
                                     </a>
                                 </li>
-                                <li className="transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2">
+                                {/* <li className="transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2">
                                     <a href="/"
                                         onClick={e => {
                                             let divisions = document.getElementById("divisions");
@@ -49,50 +58,41 @@ export const Navbar = () => {
                                     >
                                         Divisions
                                     </a>
+                                </li> */}
+                                <li className={menuItems}>
+                                    <HashLink
+                                        to="/#divisions"
+                                    >
+                                        Divisions
+                                    </HashLink>
                                 </li>
-                                <li className="transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2">
-                                    <a href="/"
-                                        onClick={e => {
-                                            let services = document.getElementById("services");
-                                            e.preventDefault();
-                                            services && services.scrollIntoView();
-                                        }}
+                                <li className={menuItems}>
+                                    <HashLink
+                                        to="/#services"
                                     >
                                         Services
-                                    </a>
+                                    </HashLink>
                                 </li>
-                                <li className="transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2">
-                                    <a href="/"
-                                        onClick={e => {
-                                            let products = document.getElementById("products");
-                                            e.preventDefault();
-                                            products && products.scrollIntoView();
-                                        }}
+                                <li className={menuItems}>
+                                    <HashLink
+                                        to="/#products"
                                     >
                                         Products
-                                    </a>
+                                    </HashLink>
                                 </li>
-                                <li className="transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2">
-                                    <a href="/"
-                                        onClick={e => {
-                                            let contact = document.getElementById("contact");
-                                            e.preventDefault();
-                                            contact && contact.scrollIntoView();
-                                        }}
+                                <li className={menuItems}>
+                                    <HashLink
+                                        to="/#clients"
                                     >
                                         Clients
-                                    </a>
+                                    </HashLink>
                                 </li>
-                                <li className="transition-all duration-400 rounded-sm hover:cursor-pointer hover:bg-white hover:text-tBlue50 px-5 py-2">
-                                    <a href="/"
-                                        onClick={e => {
-                                            let contact = document.getElementById("contact");
-                                            e.preventDefault();
-                                            contact && contact.scrollIntoView();
-                                        }}
+                                <li className={menuItems}>
+                                    <HashLink
+                                        to="/#contact"
                                     >
                                         Contact
-                                    </a>
+                                    </HashLink>
                                 </li>
                             </ul>
                         </div>

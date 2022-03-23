@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// import { motion } from "framer-motion"
 import { Navbar } from "../../components/navbar";
 import { HeaderContact } from "../../components/headercontact";
 import { Footer } from "../../components/footer";
@@ -10,7 +11,7 @@ import Colors from "../../components/theme/colors";
 import Buttons from "../../components/theme/buttons";
 import Images from "../../assets/img/index.js";
 
-export const HomePage = () => {
+export const Home = () => {
     useEffect(() => {
         let url = window.location.href.split("/");
         let target = url[url.length - 1].toLowerCase();

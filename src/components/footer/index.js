@@ -1,5 +1,5 @@
 import React from 'react';
-// import LogoImg from "../../assets/img/logo.png";
+import { Link } from 'react-router-dom';
 import Images from '../../assets/img';
 
 export const Footer = () => {
@@ -51,9 +51,11 @@ export const Footer = () => {
                                 <div className="w-2 h-full border-r border-gray-500 border-opacity-20"></div>
                             </div>
                             <div class="xsm:w-45% md:w-1/3 h-12 flex items-center xsm:justify-center md:justify-end">
-                                <a href="" className='text-tBlue50 hover:text-sky-800'>
+                                <Link
+                                    to="/privacy"
+                                    className='text-tBlue50 hover:text-sky-800'>
                                     Privacy
-                                </a>
+                                </Link>
                             </div>
                             <div class="xsm:w-45% md:w-1/3 h-12 flex items-center xsm:justify-center md:justify-start">
                                 <a href="" className='text-tBlue50 hover:text-sky-800'>

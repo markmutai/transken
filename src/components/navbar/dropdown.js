@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HashLink } from 'react-router-hash-link';
 import { Squash as Hamburger } from 'hamburger-react'
 import { createPopper } from "@popperjs/core";
 
@@ -71,8 +72,8 @@ const Dropdown = ({ color }) => {
                                 }
                                 style={{ minWidth: "12rem" }}
                             >
-                                <a
-                                    href="/"
+                                <HashLink
+                                    to="/"
                                     className={
                                         "py-4 px-4 border-b border-tBlue50 border-opacity-20 font-normal block w-full whitespace-nowrap bg-transparent " +
                                         (color === "white" ? " text-blueGray-700" : "hover:bg-tBlue50 text-tBlue50 hover:text-white")
@@ -80,15 +81,27 @@ const Dropdown = ({ color }) => {
                                     onClick={e => {
                                         closeDropdownPopover();
                                         setOpen();
-                                        let divisions = document.getElementById("divisions");
-                                        e.preventDefault();
-                                        divisions && divisions.scrollIntoView();
+
+                                    }}
+                                >
+                                    Home
+                                </HashLink>
+                                <HashLink
+                                    to="/#about"
+                                    className={
+                                        "py-4 px-4 border-b border-tBlue50 border-opacity-20 font-normal block w-full whitespace-nowrap bg-transparent " +
+                                        (color === "white" ? " text-blueGray-700" : "hover:bg-tBlue50 text-tBlue50 hover:text-white")
+                                    }
+                                    onClick={e => {
+                                        closeDropdownPopover();
+                                        setOpen();
+
                                     }}
                                 >
                                     About
-                                </a>
-                                <a
-                                    href="/"
+                                </HashLink>
+                                <HashLink
+                                    to="/#divisions"
                                     className={
                                         "xsm:py-4 md:py-5 px-4 border-b border-tBlue50 border-opacity-20 font-normal block w-full whitespace-nowrap bg-transparent " +
                                         (color === "white" ? " text-blueGray-700" : "hover:bg-tBlue50 text-tBlue50 hover:text-white")
@@ -96,15 +109,12 @@ const Dropdown = ({ color }) => {
                                     onClick={e => {
                                         closeDropdownPopover();
                                         setOpen();
-                                        let divisions = document.getElementById("divisions");
-                                        e.preventDefault();
-                                        divisions && divisions.scrollIntoView();
                                     }}
                                 >
                                     Divisions
-                                </a>
-                                <a
-                                    href="/"
+                                </HashLink>
+                                <HashLink
+                                    to="/#services"
                                     className={
                                         "xsm:py-4 md:py-5 px-4 border-b border-tBlue50 border-opacity-20 font-normal block w-full whitespace-nowrap bg-transparent " +
                                         (color === "white" ? " text-blueGray-700" : "hover:bg-tBlue50 text-tBlue50 hover:text-white")
@@ -112,15 +122,12 @@ const Dropdown = ({ color }) => {
                                     onClick={e => {
                                         closeDropdownPopover();
                                         setOpen();
-                                        let divisions = document.getElementById("divisions");
-                                        e.preventDefault();
-                                        divisions && divisions.scrollIntoView();
                                     }}
                                 >
                                     Services
-                                </a>
-                                <a
-                                    href="/"
+                                </HashLink>
+                                <HashLink
+                                    to="/#divisions"
                                     className={
                                         "xsm:py-4 md:py-5 px-4 border-b border-tBlue50 border-opacity-20 font-normal block w-full whitespace-nowrap bg-transparent " +
                                         (color === "white" ? " text-blueGray-700" : "hover:bg-tBlue50 text-tBlue50 hover:text-white")
@@ -128,15 +135,12 @@ const Dropdown = ({ color }) => {
                                     onClick={e => {
                                         closeDropdownPopover();
                                         setOpen();
-                                        let divisions = document.getElementById("divisions");
-                                        e.preventDefault();
-                                        divisions && divisions.scrollIntoView();
                                     }}
                                 >
                                     Products
-                                </a>
-                                <a
-                                    href="/"
+                                </HashLink>
+                                <HashLink
+                                    to="/#clients"
                                     className={
                                         "xsm:py-4 md:py-5 px-4 border-b border-tBlue50 border-opacity-20 font-normal block w-full whitespace-nowrap bg-transparent " +
                                         (color === "white" ? " text-blueGray-700" : "hover:bg-tBlue50 text-tBlue50 hover:text-white")
@@ -144,15 +148,12 @@ const Dropdown = ({ color }) => {
                                     onClick={e => {
                                         closeDropdownPopover();
                                         setOpen();
-                                        let clients = document.getElementById("clients");
-                                        e.preventDefault();
-                                        clients && clients.scrollIntoView();
                                     }}
                                 >
                                     Clients
-                                </a>
-                                <a
-                                    href="/"
+                                </HashLink>
+                                <HashLink
+                                    to="/#contact"
                                     className={
                                         "xsm:py-4 md:py-5 px-4 font-normal block w-full whitespace-nowrap bg-transparent " +
                                         (color === "white" ? " text-blueGray-700" : "hover:bg-tBlue50 text-tBlue50 hover:text-white")
@@ -160,13 +161,10 @@ const Dropdown = ({ color }) => {
                                     onClick={e => {
                                         closeDropdownPopover();
                                         setOpen();
-                                        let divisions = document.getElementById("divisions");
-                                        e.preventDefault();
-                                        divisions && divisions.scrollIntoView();
                                     }}
                                 >
                                     Contact
-                                </a>
+                                </HashLink>
                                 {/* <div className="h-0 my-2 border border-solid border-t-0 border-blueGray-800 opacity-25" />
                                 <a
                                     href="#pablo"
