@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import Images from '../../assets/img';
 
@@ -14,13 +14,13 @@ export const Footer = () => {
                 <div className="mx-auto pt-1 xsm:w-full md:w-11/12 lg:w-9/12 2xl:w-3/5 3xl:px-10">
                     <div class="xsm:flex flex-wrap xsm:items-center sm:justify-between xsm:pt-3 md:pt-0">
                         <div className="xsm:w-full md:w-1/2">
-                            <a href="https://transken.co.ke/" target="_blank" class="flex items-center xsm:justify-center md:justify-start xsm:mb-0 xsm:w-full md:w-1/2">
+                            <HashLink to="/" class="flex items-center xsm:justify-center md:justify-start xsm:mb-0 xsm:w-full md:w-1/2">
                                 <h1 className="titles self-center xsm:text-base md:text-md lg:text-lg 2xl:text-xl text-tBlue50 whitespace-nowrap">
                                     Transken Links Limited
                                 </h1>
 
                                 {/* <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
-                            </a>
+                            </HashLink>
                             <div className='parTxt flex flex-col xsm:mt-2 md:mt-1 xsm:space-y-3 md:space-y-0 lg:space-y-0 opacity-80 xsm:mb-4 md:mb-0 xsm:text-center md:text-left xsm:text-2xs md:text-xs lg:text-sm'>
                                 <a className="text-sky-500 hover:text-sky-900" href="tel:0722794322">
                                     0722794322
@@ -81,7 +81,7 @@ export const Footer = () => {
                         <span class="parTxt block xsm:text-3xs md:text-xs 2xl:text-xsxmini text-gray-500 sm:text-center dark:text-gray-400">
                             Copyright© 2022,&nbsp;Transken Limited. All Rights Reserved.
                         </span>
-                        <span class="parTxt block xsm:text-3xs md:text-xs 2xl:text-xsxmini text-sky-500 sm:text-center dark:text-gray-400"><a href="https://linchpin.co.ke/" target="_blank" class="parTxt hover:underline">
+                        <span class="parTxt block xsm:text-3xs md:text-xs 2xl:text-xsxmini text-sky-500 sm:text-center dark:text-gray-400"><a href="https://linchpin.co.ke/" target="https://linchpin.co.ke/" class="parTxt hover:underline">
                             Designed by Linchpin</a>
                         </span>
                     </div>

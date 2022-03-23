@@ -1,7 +1,7 @@
 {
-  "name": "transken_v01",
+  "name": "transken_ltd",
   "homepage": "http://transken.co.ke",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Transken Links Limited",
   "private": true,
   "dependencies": {

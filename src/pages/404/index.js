@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
 
@@ -8,7 +8,7 @@ import { Footer } from "../../components/footer";
 import MapContainer from "../../components/map";
 import Form from "../../components/contact/form.tsx";
 import Fonts from "../../components/theme/fonts";
-import Colors from "../../components/theme/colors";
+// import Colors from "../../components/theme/colors";
 import Buttons from "../../components/theme/buttons";
 import Images from "../../assets/img/index.js";
 
@@ -20,11 +20,11 @@ export const ErrorPage = () => {
         element && element.scrollIntoView({ behavior: "smooth", block: "start" });
     }, []);
 
-    const [selected, setSelected] = useState(null)
+    // const [selected, setSelected] = useState(null)
 
-    const toggle = () => {
-        setSelected(!selected);
-    }
+    // const toggle = () => {
+    //     setSelected(!selected);
+    // }
 
     const navigate = useNavigate();
 

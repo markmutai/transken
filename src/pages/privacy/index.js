@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
 
 import { Navbar } from "../../components/navbar";
@@ -9,7 +9,7 @@ import MapContainer from "../../components/map";
 import Form from "../../components/contact/form.tsx";
 import Fonts from "../../components/theme/fonts";
 import Colors from "../../components/theme/colors";
-import Buttons from "../../components/theme/buttons";
+// import Buttons from "../../components/theme/buttons";
 import Images from "../../assets/img/index.js";
 
 export const Privacy = () => {
@@ -20,13 +20,13 @@ export const Privacy = () => {
         element && element.scrollIntoView({ behavior: "smooth", block: "start" });
     }, []);
 
-    const [selected, setSelected] = useState(null)
+    // const [selected, setSelected] = useState(null)
 
-    const toggle = () => {
-        setSelected(!selected);
-    }
+    // const toggle = () => {
+    //     setSelected(!selected);
+    // }
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const privacySection = "flex flex-wrap md:flex-row xsm:py-4 lg:py-4 2xl:py-8 xsm:px-2 md:px-12";
 
