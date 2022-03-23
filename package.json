@@ -32,6 +32,7 @@
     "gulp-wait": "^0.0.2",
     "gulp-webp": "^4.0.1",
     "jquery": "^3.6.0",
+    "next": "^12.1.0",
     "node-fetch": "^3.2.3",
     "nodemailer": "^6.7.2",
     "prop-types": "^15.8.1",
