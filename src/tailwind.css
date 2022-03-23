@@ -4422,6 +4422,10 @@ textarea.form-control.is-invalid {
   list-style-type: none;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -4908,6 +4912,18 @@ textarea.form-control.is-invalid {
   padding-bottom: 1.75rem;
 }
 
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -5339,6 +5355,11 @@ textarea.form-control.is-invalid {
     margin-bottom: 0.75rem;
   }
 
+  .xsm\:my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
   .xsm\:mb-3 {
     margin-bottom: 0.75rem;
   }
@@ -5616,6 +5637,16 @@ textarea.form-control.is-invalid {
     padding-bottom: 2.5rem;
   }
 
+  .xsm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .xsm\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .xsm\:pt-3 {
     padding-top: 0.75rem;
   }
@@ -5682,6 +5713,14 @@ textarea.form-control.is-invalid {
 
   .xsm\:pt-6 {
     padding-top: 1.5rem;
+  }
+
+  .xsm\:pb-8 {
+    padding-bottom: 2rem;
+  }
+
+  .xsm\:pl-1 {
+    padding-left: 0.25rem;
   }
 
   .xsm\:text-center {
@@ -5793,6 +5832,16 @@ textarea.form-control.is-invalid {
     margin-bottom: 1rem;
   }
 
+  .md\:my-6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .md\:my-5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
   .md\:-mb-8 {
     margin-bottom: -2rem;
   }
@@ -5827,6 +5876,22 @@ textarea.form-control.is-invalid {
 
   .md\:mb-7 {
     margin-bottom: 1.75rem;
+  }
+
+  .md\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
+  .md\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
   }
 
   .md\:block {
@@ -6040,6 +6105,26 @@ textarea.form-control.is-invalid {
     padding-right: 3.5rem;
   }
 
+  .md\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .md\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .md\:px-36 {
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
+
+  .md\:px-28 {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
   }
@@ -6106,6 +6191,10 @@ textarea.form-control.is-invalid {
 
   .md\:pt-7 {
     padding-top: 1.75rem;
+  }
+
+  .md\:pl-2 {
+    padding-left: 0.5rem;
   }
 
   .md\:text-left {
@@ -6389,6 +6478,10 @@ textarea.form-control.is-invalid {
     padding-top: 1.75rem;
   }
 
+  .lg\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
   .lg\:text-lgplus {
     font-size: 1.15rem;
   }
@@ -6452,6 +6545,18 @@ textarea.form-control.is-invalid {
 
   .xl\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .xl\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
+  .xl\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .xl\:mb-6 {
+    margin-bottom: 1.5rem;
   }
 
   .xl\:h-17 {
@@ -6545,6 +6650,18 @@ textarea.form-control.is-invalid {
     padding-left: 1rem;
   }
 
+  .xl\:pb-7 {
+    padding-bottom: 1.75rem;
+  }
+
+  .xl\:pb-8 {
+    padding-bottom: 2rem;
+  }
+
+  .xl\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .xl\:text-lg {
     font-size: 1.125rem;
   }
@@ -6574,6 +6691,11 @@ textarea.form-control.is-invalid {
   .\32xl\:my-6 {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+  }
+
+  .\32xl\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .\32xl\:mb-4 {
@@ -6610,6 +6732,14 @@ textarea.form-control.is-invalid {
 
   .\32xl\:mt-0 {
     margin-top: 0px;
+  }
+
+  .\32xl\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .\32xl\:mt-1 {
+    margin-top: 0.25rem;
   }
 
   .\32xl\:h-48 {
@@ -6658,6 +6788,10 @@ textarea.form-control.is-invalid {
 
   .\32xl\:w-14 {
     width: 3.5rem;
+  }
+
+  .\32xl\:w-16 {
+    width: 4rem;
   }
 
   .\32xl\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -6739,6 +6873,16 @@ textarea.form-control.is-invalid {
   .\32xl\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .\32xl\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .\32xl\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .\32xl\:pt-8 {

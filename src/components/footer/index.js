@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import Images from '../../assets/img';
 
 export const Footer = () => {
@@ -51,31 +52,31 @@ export const Footer = () => {
                                 <div className="w-2 h-full border-r border-gray-500 border-opacity-20"></div>
                             </div>
                             <div class="xsm:w-45% md:w-1/3 h-12 flex items-center xsm:justify-center md:justify-end">
-                                <Link
+                                <HashLink
                                     to="/privacy"
-                                    className='text-tBlue50 hover:text-sky-800'>
+                                    className='text-tBlue50 hover:text-sky-800'
+                                >
                                     Privacy
-                                </Link>
+                                </HashLink>
                             </div>
                             <div class="xsm:w-45% md:w-1/3 h-12 flex items-center xsm:justify-center md:justify-start">
-                                <a href="" className='text-tBlue50 hover:text-sky-800'>
-                                    Licensing
-                                </a>
+                                <HashLink
+                                    to="/#services"
+                                    className='text-tBlue50 hover:text-sky-800'
+                                >
+                                    Services
+                                </HashLink>
                             </div>
                             <div className="flex items-center justify-center xsm:w-10% md:w-1/4 h-12">
                                 <div className="w-2 h-full border-r border-gray-500 border-opacity-20"></div>
                             </div>
                             <div class="xsm:w-45% md:w-1/3 h-12 flex items-center xsm:justify-center md:justify-end">
-                                <a
+                                <HashLink
+                                    to="/#contact"
                                     className='text-tBlue50 hover:text-sky-800'
-                                    onClick={e => {
-                                        let about = document.getElementById("about");
-                                        e.preventDefault();
-                                        about && about.scrollIntoView();
-                                    }}
                                 >
                                     Contact
-                                </a>
+                                </HashLink>
                             </div>
                         </div>
                     </div>

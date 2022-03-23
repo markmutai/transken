@@ -81,7 +81,6 @@ const Dropdown = ({ color }) => {
                                     onClick={e => {
                                         closeDropdownPopover();
                                         setOpen();
-
                                     }}
                                 >
                                     Home
@@ -151,6 +150,19 @@ const Dropdown = ({ color }) => {
                                     }}
                                 >
                                     Clients
+                                </HashLink>
+                                <HashLink
+                                    to="/privacy"
+                                    className={
+                                        "xsm:py-4 md:py-5 px-4 border-b border-tBlue50 border-opacity-20 font-normal block w-full whitespace-nowrap bg-transparent " +
+                                        (color === "white" ? " text-blueGray-700" : "hover:bg-tBlue50 text-tBlue50 hover:text-white")
+                                    }
+                                    onClick={e => {
+                                        closeDropdownPopover();
+                                        setOpen();
+                                    }}
+                                >
+                                    Privacy
                                 </HashLink>
                                 <HashLink
                                     to="/#contact"

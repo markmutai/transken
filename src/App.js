@@ -1,7 +1,7 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom'
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 import RouteToTop from "./components/routeToTop";
 // import { Navbar } from "./components/navbar";
 // import { HeaderContact } from "./components/headercontact";
@@ -14,18 +14,18 @@ function App() {
   return (
     <BrowserRouter>
       <RouteToTop />
-      <AnimatePresence>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/privacy" element={<Privacy />} />
-          <Route exact path="/404" component={ErrorPage} />
-          <Route
-            path="*"
-            element={<ErrorPage to="/" replace />}
-          />
+      {/* <AnimatePresence> */}
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/privacy" element={<Privacy />} />
+        <Route exact path="/404" component={ErrorPage} />
+        <Route
+          path="*"
+          element={<ErrorPage to="/" replace />}
+        />
 
-        </Routes>
-      </AnimatePresence>
+      </Routes>
+      {/* </AnimatePresence> */}
     </BrowserRouter>
   );
 }
