@@ -5528,6 +5528,18 @@ textarea.form-control.is-invalid {
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .xsm\:space-x-1 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .xsm\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .xsm\:rounded-sm {
     border-radius: 0.125rem;
   }
@@ -6352,6 +6364,18 @@ textarea.form-control.is-invalid {
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .lg\:rounded-md {
     border-radius: 0.375rem;
   }
@@ -6420,6 +6444,11 @@ textarea.form-control.is-invalid {
   .lg\:px-1 {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+  }
+
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .lg\:pb-16 {
@@ -6601,6 +6630,12 @@ textarea.form-control.is-invalid {
     margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .xl\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .xl\:rounded-2xl {
     border-radius: 1rem;
   }
@@ -6632,6 +6667,11 @@ textarea.form-control.is-invalid {
   .xl\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .xl\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .xl\:pb-6 {
@@ -6806,6 +6846,12 @@ textarea.form-control.is-invalid {
     margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .\32xl\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .\32xl\:rounded-3xl {
     border-radius: 1.5rem;
   }
@@ -6885,6 +6931,11 @@ textarea.form-control.is-invalid {
     padding-right: 0px;
   }
 
+  .\32xl\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .\32xl\:pt-8 {
     padding-top: 2rem;
   }
@@ -6915,6 +6966,10 @@ textarea.form-control.is-invalid {
 
   .\32xl\:pt-10 {
     padding-top: 2.5rem;
+  }
+
+  .\32xl\:pr-3 {
+    padding-right: 0.75rem;
   }
 
   .\32xl\:text-base {
@@ -6979,6 +7034,18 @@ textarea.form-control.is-invalid {
 @media (min-width: 1900px) {
   .\33xl\:w-3\/5 {
     width: 60%;
+  }
+
+  .\33xl\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .\33xl\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .\33xl\:px-10 {

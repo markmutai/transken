@@ -37,16 +37,12 @@ export const Footer = () => {
                         </div>
                         <div class="parTxt flex flex-wrap border-gray-300 border-opacity-60 xsm:pt-4 md:pt-0 xsm:mt-2 md:mt-0 xsm:border-t md:border-t-0 xsm:text-xsxmini xl:text-sm xsm:w-full md:w-1/4 xl:w-1/3">
                             <div class="xsm:w-45% md:w-1/3 h-12 flex items-center xsm:justify-center md:justify-start">
-                                <a
+                                <HashLink
+                                    to="/#about"
                                     className='text-tBlue50 hover:text-sky-800'
-                                    onClick={e => {
-                                        let about = document.getElementById("about");
-                                        e.preventDefault();
-                                        about && about.scrollIntoView();
-                                    }}
                                 >
                                     About
-                                </a>
+                                </HashLink>
                             </div>
                             <div className="flex items-center justify-center xsm:w-10% md:w-1/4 h-12">
                                 <div className="w-2 h-full border-r border-gray-500 border-opacity-20"></div>
