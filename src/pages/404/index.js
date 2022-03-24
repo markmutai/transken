@@ -35,14 +35,16 @@ export const ErrorPage = () => {
                     duration: 1.05,
                     ease: "easeInOut"
                 }}
-                exit={{ opacity: 0 }}
+                exit={{
+                    opacity: 0
+                }}
                 animate={{
                     opacity: 1,
                     y: 0
                 }}
                 initial={{
                     opacity: 0,
-                    y: -75
+                    y: -100
                 }}
             >
                 <div className="App h-full bg-gradient-to-br from-white_egg via-white_egg to-white_semi">

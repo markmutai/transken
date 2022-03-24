@@ -1,6 +1,6 @@
 /*
 
-v0,1 
+v0,12 
 Changelog:
 
     - Implementation of TailwindCSS
@@ -308,6 +308,9 @@ Menu
   display: flex;
   flex-flow: column;
   align-items: stretch;
+}
+.contentOveride{
+  height:20px !important
 }
 
 $arrowSize:1.6rem;

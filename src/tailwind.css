@@ -4289,6 +4289,10 @@ textarea.form-control.is-invalid {
   height: 100vh;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -4305,8 +4309,8 @@ textarea.form-control.is-invalid {
   height: 2.25rem;
 }
 
-.h-auto {
-  height: auto;
+.h-1\/3 {
+  height: 33.333333%;
 }
 
 .w-full {
@@ -4486,6 +4490,18 @@ textarea.form-control.is-invalid {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.place-self-auto {
+  place-self: auto;
+}
+
+.place-self-start {
+  place-self: start;
+}
+
+.place-self-center {
+  place-self: center;
 }
 
 .self-center {
@@ -4862,6 +4878,11 @@ textarea.form-control.is-invalid {
   padding-right: 1.25rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -4902,14 +4923,6 @@ textarea.form-control.is-invalid {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
-.pb-7 {
-  padding-bottom: 1.75rem;
 }
 
 .pl-5 {
@@ -5350,16 +5363,6 @@ textarea.form-control.is-invalid {
     margin-bottom: 0px;
   }
 
-  .xsm\:my-3 {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .xsm\:my-2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
   .xsm\:mb-3 {
     margin-bottom: 0.75rem;
   }
@@ -5504,6 +5507,14 @@ textarea.form-control.is-invalid {
     width: 50%;
   }
 
+  .xsm\:w-40 {
+    width: 10rem;
+  }
+
+  .xsm\:w-screen {
+    width: 100vw;
+  }
+
   .xsm\:flex-row {
     flex-direction: row;
   }
@@ -5526,12 +5537,6 @@ textarea.form-control.is-invalid {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .xsm\:space-x-1 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.25rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .xsm\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
@@ -5647,11 +5652,6 @@ textarea.form-control.is-invalid {
   .xsm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }
-
-  .xsm\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
   }
 
   .xsm\:px-10 {
@@ -5839,19 +5839,14 @@ textarea.form-control.is-invalid {
     position: relative;
   }
 
-  .md\:my-4 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .md\:my-6 {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
   .md\:my-5 {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
+  }
+
+  .md\:my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .md\:-mb-8 {
@@ -5894,14 +5889,6 @@ textarea.form-control.is-invalid {
     margin-top: 1.5rem;
   }
 
-  .md\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
-  .md\:mb-4 {
-    margin-bottom: 1rem;
-  }
-
   .md\:mb-6 {
     margin-bottom: 1.5rem;
   }
@@ -5934,8 +5921,16 @@ textarea.form-control.is-invalid {
     height: 5rem;
   }
 
+  .md\:h-12 {
+    height: 3rem;
+  }
+
   .md\:h-90 {
     height: 21.5rem;
+  }
+
+  .md\:h-10 {
+    height: 2.5rem;
   }
 
   .md\:w-10\/12 {
@@ -5980,6 +5975,10 @@ textarea.form-control.is-invalid {
 
   .md\:w-5\/12 {
     width: 41.666667%;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
   }
 
   .md\:w-6\/12 {
@@ -6097,34 +6096,14 @@ textarea.form-control.is-invalid {
     padding-right: 6rem;
   }
 
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .md\:px-14 {
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
-
-  .md\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-
-  .md\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .md\:px-36 {
@@ -6132,9 +6111,19 @@ textarea.form-control.is-invalid {
     padding-right: 9rem;
   }
 
-  .md\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .md\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .md\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .md\:pt-0 {
@@ -6195,10 +6184,6 @@ textarea.form-control.is-invalid {
 
   .md\:pt-4 {
     padding-top: 1rem;
-  }
-
-  .md\:pt-10 {
-    padding-top: 2.5rem;
   }
 
   .md\:pt-7 {
@@ -6358,18 +6343,6 @@ textarea.form-control.is-invalid {
     margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1rem * var(--tw-space-x-reverse));
-    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .lg\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .lg\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -6406,6 +6379,16 @@ textarea.form-control.is-invalid {
     border-top-width: 6px;
   }
 
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .lg\:px-14 {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
@@ -6434,21 +6417,6 @@ textarea.form-control.is-invalid {
   .lg\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .lg\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .lg\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
-  .lg\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
   .lg\:pb-16 {
@@ -6501,10 +6469,6 @@ textarea.form-control.is-invalid {
 
   .lg\:pt-6 {
     padding-top: 1.5rem;
-  }
-
-  .lg\:pt-7 {
-    padding-top: 1.75rem;
   }
 
   .lg\:pt-10 {
@@ -6567,21 +6531,8 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 1200px) {
-  .xl\:my-4 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
   .xl\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .xl\:mt-3 {
-    margin-top: 0.75rem;
-  }
-
-  .xl\:mb-4 {
-    margin-bottom: 1rem;
   }
 
   .xl\:mb-6 {
@@ -6624,12 +6575,6 @@ textarea.form-control.is-invalid {
     width: 3rem;
   }
 
-  .xl\:space-x-1 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.25rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .xl\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -6664,16 +6609,6 @@ textarea.form-control.is-invalid {
     padding-right: 1.75rem;
   }
 
-  .xl\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .xl\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
   .xl\:pb-6 {
     padding-bottom: 1.5rem;
   }
@@ -6688,14 +6623,6 @@ textarea.form-control.is-invalid {
 
   .xl\:pl-4 {
     padding-left: 1rem;
-  }
-
-  .xl\:pb-7 {
-    padding-bottom: 1.75rem;
-  }
-
-  .xl\:pb-8 {
-    padding-bottom: 2rem;
   }
 
   .xl\:pb-10 {
@@ -6728,16 +6655,6 @@ textarea.form-control.is-invalid {
 }
 
 @media (min-width: 1600px) {
-  .\32xl\:my-6 {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .\32xl\:my-0 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
   .\32xl\:mb-4 {
     margin-bottom: 1rem;
   }
@@ -6754,6 +6671,10 @@ textarea.form-control.is-invalid {
     margin-top: 3rem;
   }
 
+  .\32xl\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .\32xl\:-mt-8 {
     margin-top: -2rem;
   }
@@ -6766,20 +6687,8 @@ textarea.form-control.is-invalid {
     margin-top: -8rem;
   }
 
-  .\32xl\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
-  .\32xl\:mt-0 {
-    margin-top: 0px;
-  }
-
   .\32xl\:mb-6 {
     margin-bottom: 1.5rem;
-  }
-
-  .\32xl\:mt-1 {
-    margin-top: 0.25rem;
   }
 
   .\32xl\:h-48 {
@@ -6840,12 +6749,6 @@ textarea.form-control.is-invalid {
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .\32xl\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .\32xl\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -6891,6 +6794,16 @@ textarea.form-control.is-invalid {
     padding-right: 2.5rem;
   }
 
+  .\32xl\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .\32xl\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .\32xl\:px-18 {
     padding-left: 4.5rem;
     padding-right: 4.5rem;
@@ -6911,29 +6824,9 @@ textarea.form-control.is-invalid {
     padding-bottom: 2rem;
   }
 
-  .\32xl\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .\32xl\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-
-  .\32xl\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .\32xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .\32xl\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }
 
   .\32xl\:pt-8 {
@@ -6942,6 +6835,10 @@ textarea.form-control.is-invalid {
 
   .\32xl\:pb-10 {
     padding-bottom: 2.5rem;
+  }
+
+  .\32xl\:pr-3 {
+    padding-right: 0.75rem;
   }
 
   .\32xl\:pb-16 {
@@ -6966,10 +6863,6 @@ textarea.form-control.is-invalid {
 
   .\32xl\:pt-10 {
     padding-top: 2.5rem;
-  }
-
-  .\32xl\:pr-3 {
-    padding-right: 0.75rem;
   }
 
   .\32xl\:text-base {
@@ -7034,18 +6927,6 @@ textarea.form-control.is-invalid {
 @media (min-width: 1900px) {
   .\33xl\:w-3\/5 {
     width: 60%;
-  }
-
-  .\33xl\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .\33xl\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .\33xl\:px-10 {

@@ -5277,6 +5277,11 @@ combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
+combo-storage@^2.0.3:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/combo-storage/-/combo-storage-2.0.4.tgz#05ff22127a6f34eed512c3c67e0bc01aa59df5e7"
+  integrity sha512-pyk7ypRAC7TW/oLp0lXwdQ9E9iWTvpVegZgh/2OQ1UsQJzM9fwxct+RSUT6Ekr83fC5Zp90+XcOKbMuH+CYckw==
+
 comma-separated-tokens@^1.0.0:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz#632b80b6117867a158f1080ad498b2fbe7e3f5ea"
@@ -13224,6 +13229,22 @@ react-bootstrap@^2.2.1:
     react-transition-group "^4.4.2"
     uncontrollable "^7.2.1"
     warning "^4.0.3"
+
+react-cookie-consent-notification@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-cookie-consent-notification/-/react-cookie-consent-notification-1.1.1.tgz#59d36bc46b7c9818369ebcee35bd86972641b37f"
+  integrity sha512-TpEsXExyNtpoD6LW7h+Lqt9EiGQ4JmMEcwuCxFH66MvpPa89GuNA2Rlrn2i/7ipnY7qzPEgPpSqrzBjGnbybSQ==
+  dependencies:
+    combo-storage "^2.0.3"
+    prop-types "^15.7.2"
+
+react-cookie-consent@^7.3.1:
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-7.3.1.tgz#f256ce890abaa60cb0ad25287eaac1cdbbb4cae1"
+  integrity sha512-05usKig0YYy6OLfBlQBIQk/TTi8h3PUGvs218kPO5bAb4f7D0UTjC3N1zG2UAVWFYbiI0QWyG0s3bkh2sfiW3Q==
+  dependencies:
+    js-cookie "^2.2.1"
+    prop-types "^15.7.2"
 
 react-copy-to-clipboard@^5.0.3:
   version "5.0.4"

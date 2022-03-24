@@ -3,9 +3,6 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // import { AnimatePresence } from "framer-motion";
 import RouteToTop from "./components/routeToTop";
-// import { Navbar } from "./components/navbar";
-// import { HeaderContact } from "./components/headercontact";
-// import { Footer } from "./components/footer";
 import { Home } from "./pages/home";
 import { ErrorPage } from "./pages/404";
 import { Privacy } from './pages/privacy/index';
