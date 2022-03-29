@@ -3,8 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import "./assets/css/style.min.css";
 import App from "./App";
-import 'flowbite';
-import 'tw-elements';
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
