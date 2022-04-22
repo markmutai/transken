@@ -197,6 +197,10 @@ Menu
   align-items: stretch;
 }
 
+.contentOveride {
+  height: 20px !important;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-size: 80% 80%;

@@ -57,19 +57,13 @@ Fonts
 
 */
 
-$html-font-size: 16px;
+// $html-font-size: 16px;
+@use 'sass:math';
 
 /* functions--------------------------------------------------------------------------------------------*/
 
-@function stripUnit($value) {
-  @return $value / ($value * 0 + 1);
-  // @return calc($value / ($value * 0 + 1));
-}
-
-// math.div($value, $value * 0 + 1) or calc($value / ($value * 0 + 1))
-
 @function rem($pxValue) {
-  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+  @return math.div($pxValue, 16px) * 1rem;
 }
 
 /* Timing--------------------------------------------------------------------------------------------*/
@@ -194,7 +188,7 @@ body {
   opacity: 0.15;
   background-blend-mode: overlay;
   -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  mask-image: linear-gradient(180deg, rgba(0,0,0,1)0%, rgba(0,0,0,0.6)60%,  rgba(0,0,0,0)100%);
+  mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%,  rgba(0,0,0,0) 100%);
 }
 
 .ptn-bottom{
@@ -209,7 +203,7 @@ body {
   opacity: 0.15;
   background-blend-mode: overlay;
   -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,.6)));
-  mask-image: linear-gradient(0deg, rgba(0,0,0,1)0%, rgba(0,0,0,0)60%);
+  mask-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%);
 }
 
 // .introView{

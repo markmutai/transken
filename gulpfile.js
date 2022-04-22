@@ -1,3 +1,4 @@
+const siteName = "TranskenLinks";
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const webp = require("gulp-webp");
@@ -6,6 +7,8 @@ const rename = require("gulp-rename");
 const changed = require("gulp-changed");
 const browserSync = require("browser-sync").create();
 const reload = browserSync.reload;
+const realFavicon = require('gulp-real-favicon');
+const FAVICON_DATA_FILE = 'faviconData.json';
 const sass_src = "./src/assets/sass/*.scss";
 const sass_dest = "./src/assets/css";
 
@@ -78,7 +81,80 @@ gulp.task("gulpImg", async function () {
     imgCompress();
 });
 
+gulp.task('favicon', function (done) {
+    realFavicon.generateFavicon({
+        masterPicture: './favicon.png',
+        dest: './public',
+        iconsPath: '/',
+        design: {
+            ios: {
+                pictureAspect: 'noChange',
+                assets: {
+                    ios6AndPriorIcons: false,
+                    ios7AndLaterIcons: false,
+                    precomposedIcons: false,
+                    declareOnlyDefaultIcon: true
+                },
+                appName: { siteName }
+            },
+            desktopBrowser: {
+                design: 'background',
+                backgroundColor: '#00346a',
+                backgroundRadius: 0.2,
+                imageScale: 0.8
+            },
+            windows: {
+                pictureAspect: 'noChange',
+                backgroundColor: '#00346a',
+                onConflict: 'override',
+                assets: {
+                    windows80Ie10Tile: false,
+                    windows10Ie11EdgeTiles: {
+                        small: false,
+                        medium: true,
+                        big: false,
+                        rectangle: false
+                    }
+                },
+                appName: { siteName }
+            },
+            androidChrome: {
+                pictureAspect: 'backgroundAndMargin',
+                margin: '13%',
+                backgroundColor: '#00346a',
+                themeColor: '#00346a',
+                manifest: {
+                    name: { siteName },
+                    display: 'standalone',
+                    orientation: 'notSet',
+                    onConflict: 'override',
+                    declared: true
+                },
+                assets: {
+                    legacyIcon: false,
+                    lowResolutionIcons: false
+                }
+            },
+            safariPinnedTab: {
+                pictureAspect: 'blackAndWhite',
+                threshold: 58.59375,
+                themeColor: '#00346a'
+            }
+        },
+        settings: {
+            scalingAlgorithm: 'Mitchell',
+            errorOnImageTooSmall: false,
+            readmeFile: false,
+            htmlCodeFile: true,
+            usePathAsIs: false
+        },
+        markupFile: FAVICON_DATA_FILE
+    }, function () {
+        done();
+    });
+});
+
 
 // --------------------------------------------- run
 
-gulp.task("default", gulp.series("gulpImg", "tw", "compile_sass", "compile_css", "watchMeDoMyTing"));
+gulp.task("default", gulp.series("gulpImg", "tw", "compile_sass", "compile_css", "favicon", "watchMeDoMyTing"));
